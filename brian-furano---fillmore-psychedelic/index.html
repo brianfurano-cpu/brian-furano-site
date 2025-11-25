@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brian Furano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fillmore: {
+                moss: '#4F6D48',
+                orange: '#C0562D',
+                cream: '#F5E6CA',
+                teal: '#3A606E',
+                sepia: '#D6C68B',
+                black: '#121212',
+                charcoal: '#1A1A1A'
+              }
+            },
+            animation: {
+              'spin-slow': 'spin 30s linear infinite',
+              'spin-reverse-slow': 'spin 45s linear infinite reverse',
+              'pulse-slow': 'pulse-scale 8s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              'pulse-scale': {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+            fontFamily: {
+              'psychedelic': ['"Fraunces"', 'serif'], // Using a curvy serif available via Google Fonts
+              'clean': ['"Inter"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Importing clean sans-serif and a 70s style serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #121212;
+        color: #F5E6CA;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1A1A1A; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4F6D48; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C0562D; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
